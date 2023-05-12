@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in);
+    
+    System.out.print("Insira seu nome: ");
+    String nome = teclado.nextLine();
+    
+    System.out.print("Insira seu peso: ");
+    double peso = teclado.nextDouble();
+    
+    System.out.print("Insira a quantidade de água que você bebeu: ");
+    double bebi = teclado.nextDouble();
+    double bebo = peso*35/1000;
+    double beberei = bebo-bebi;
+    
+    System.out.println("Seu nome é: " + nome);
+    System.out.println("Seu peso é: " + peso + "KG");
+    System.out.println("Você bebeu de água: " + bebi + "L");
+    System.out.println("Você deve beber por dia: " + bebo + "L");
+
+    if (beberei <=0){
+    System.out.println("Parabéns, você atingiu a meta de hidratação diária");}
+    else {
+    System.out.println("Continue focado em se hidratar por hoje, ainda faltam " + beberei + "litros! Você consegue!");
+    }
+  }
+}
